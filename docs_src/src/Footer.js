@@ -12,7 +12,7 @@ function FooterEN() {
         </p>
         <p className="my-1">
           You can find the website source code on{" "}
-          <a href="https://github.com/sc420/jellify-ur-website/tree/main/docs_src">
+          <a href="https://github.com/JMcrafter26/jellify-ur-website/tree/main/docs_src">
             GitHub
           </a>
           .
@@ -32,7 +32,7 @@ function FooterTW() {
         </p>
         <p className="my-1">
           網頁的程式碼可以在{" "}
-          <a href="https://github.com/sc420/jellify-ur-website/tree/main/docs_src">
+          <a href="https://github.com/JMcrafter26/jellify-ur-website/tree/main/docs_src">
             GitHub
           </a>{" "}
           上看

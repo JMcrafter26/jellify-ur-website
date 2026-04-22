@@ -25,16 +25,11 @@ function WhyYouShouldUseItEN() {
 
       <pre>
         <code>
-          https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js
-        </code>
-      </pre>
-      <pre>
-        <code>
           https://cdn.jsdelivr.net/npm/matter-js@0.17.1/build/matter.min.js
         </code>
       </pre>
       <pre>
-        <code>https://sc420.github.io/jellify-ur-website/js/jellify.js</code>
+        <code>https://jmcrafter26.github.io/jellify-ur-website/js/jellify.js</code>
       </pre>
 
       <p className="fw-bold">Just kidding lol</p>
@@ -64,16 +59,11 @@ function WhyYouShouldUseItTW() {
 
       <pre>
         <code>
-          https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js
-        </code>
-      </pre>
-      <pre>
-        <code>
           https://cdn.jsdelivr.net/npm/matter-js@0.17.1/build/matter.min.js
         </code>
       </pre>
       <pre>
-        <code>https://sc420.github.io/jellify-ur-website/js/jellify.js</code>
+        <code>https://jmcrafter26.github.io/jellify-ur-website/js/jellify.js</code>
       </pre>
 
       <p className="fw-bold">開玩笑的 XD</p>

@@ -9,7 +9,7 @@ function OtherSoftnessEN(props) {
       <p>
         The bookmarklet detects the global variable <code>JELLIFY_OPTIONS</code>{" "}
         to allow customization (See the{" "}
-        <a href="https://github.com/sc420/jellify-ur-website/blob/main/src/jellify.js">
+        <a href="https://github.com/JMcrafter26/jellify-ur-website/blob/main/src/jellify.js">
           code
         </a>{" "}
         for the full list of options). For example, we can adjust{" "}
@@ -44,7 +44,7 @@ function OtherSoftnessTW(props) {
       <p>
         你可以用一個全域的變數 <code>JELLIFY_OPTIONS</code>{" "}
         來客製化物理引擎等等的相關的行為 (詳細的選項可以看{" "}
-        <a href="https://github.com/sc420/jellify-ur-website/blob/main/src/jellify.js">
+        <a href="https://github.com/JMcrafter26/jellify-ur-website/blob/main/src/jellify.js">
           程式碼
         </a>{" "}
         ). 例: 可以設定 <code>physics.constraint.minStiffness</code>{" "}

@@ -1,9 +1,135 @@
-/* global $, Matter */
+/* global Matter */
 /* eslint arrow-body-style: "off" */
 /* eslint max-classes-per-file: "off" */
 /* eslint no-console: ["error", { allow: ["info", "debug"] }] */
 
 (() => {
+  class DomQuery {
+    constructor(elements) {
+      this.elements = elements;
+    }
+
+    static from(input) {
+      if (input === window || input === document) {
+        return new DomQuery([input]);
+      }
+      if (input instanceof Element) {
+        return new DomQuery([input]);
+      }
+      if (typeof input === 'string') {
+        return new DomQuery(Array.from(document.querySelectorAll(input)));
+      }
+      return new DomQuery([]);
+    }
+
+    toArray() {
+      return [...this.elements];
+    }
+
+    get(index) {
+      return this.elements[index];
+    }
+
+    children() {
+      const allChildren = this.elements.flatMap((el) => {
+        return Array.from(el.children || []);
+      });
+      return new DomQuery(allChildren);
+    }
+
+    parents() {
+      const allParents = this.elements.flatMap((el) => {
+        const parents = [];
+        let curParent = el.parentElement;
+        while (curParent) {
+          parents.push(curParent);
+          curParent = curParent.parentElement;
+        }
+        return parents;
+      });
+      return new DomQuery(allParents);
+    }
+
+    css(name, value) {
+      if (typeof value === 'undefined') {
+        const el = this.get(0);
+        if (!el || el === window || el === document) return undefined;
+        return window.getComputedStyle(el).getPropertyValue(name);
+      }
+      this.elements.forEach((el) => {
+        if (el !== window && el !== document) {
+          el.style.setProperty(name, value);
+        }
+      });
+      return this;
+    }
+
+    is(selector) {
+      if (selector !== ':visible') {
+        throw new Error(`Unsupported selector "${selector}"`);
+      }
+      const el = this.get(0);
+      if (!el || el === window || el === document) return false;
+      const style = window.getComputedStyle(el);
+      const rect = el.getBoundingClientRect();
+      return (
+        style.display !== 'none'
+        && style.visibility !== 'hidden'
+        && rect.width > 0
+        && rect.height > 0
+      );
+    }
+
+    width() {
+      const el = this.get(0);
+      if (el === window) return window.innerWidth;
+      if (el === document) {
+        const { body } = document;
+        const html = document.documentElement;
+        return Math.max(
+          body ? body.scrollWidth : 0,
+          body ? body.offsetWidth : 0,
+          html ? html.clientWidth : 0,
+          html ? html.scrollWidth : 0,
+          html ? html.offsetWidth : 0,
+        );
+      }
+      if (!el) return 0;
+      return el.getBoundingClientRect().width;
+    }
+
+    height() {
+      const el = this.get(0);
+      if (el === window) return window.innerHeight;
+      if (el === document) {
+        const { body } = document;
+        const html = document.documentElement;
+        return Math.max(
+          body ? body.scrollHeight : 0,
+          body ? body.offsetHeight : 0,
+          html ? html.clientHeight : 0,
+          html ? html.scrollHeight : 0,
+          html ? html.offsetHeight : 0,
+        );
+      }
+      if (!el) return 0;
+      return el.getBoundingClientRect().height;
+    }
+
+    ready(callback) {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', callback, { once: true });
+      } else {
+        callback();
+      }
+      return this;
+    }
+  }
+
+  function $(input) {
+    return DomQuery.from(input);
+  }
+
   class RandomUtil {
     static randValue(min, max) {
       return Math.random() * (max - min) + min;
