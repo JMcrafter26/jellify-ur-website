@@ -6,11 +6,8 @@ function BehindTheSceneEN(props) {
   return (
     <>
       <h2>Behind the Scene</h2>
-      <p>I use 2 libraries:</p>
+      <p>I use this library:</p>
       <ul>
-        <li>
-          <a href="https://jquery.com/">jQuery</a>
-        </li>
         <li>
           <a href="https://brm.io/matter-js/">Matter.js</a>
         </li>
@@ -22,7 +19,7 @@ function BehindTheSceneEN(props) {
       </p>
 
       <ol>
-        <li>Use jQuery to find elements and build a hierarchical tree</li>
+        <li>Use DOM APIs to find elements and build a hierarchical tree</li>
         <li>
           Build a visual tree with larger rectangle as parent and containing
           rectangles as its children on the hierarchical tree with the help of{" "}
@@ -73,11 +70,8 @@ function BehindTheSceneTW(props) {
   return (
     <>
       <h2>程式運作原理</h2>
-      <p>我用了 2 個 libraries:</p>
+      <p>我用了這個 library:</p>
       <ul>
-        <li>
-          <a href="https://jquery.com/">jQuery</a>
-        </li>
         <li>
           <a href="https://brm.io/matter-js/">Matter.js</a>
         </li>
@@ -86,7 +80,7 @@ function BehindTheSceneTW(props) {
       <p>只要靠幾個步驟就可以把網頁變成一團亂:</p>
 
       <ol>
-        <li>用 jQuery 找 elements 並建一個 tree</li>
+        <li>用 DOM APIs 找 elements 並建一個 tree</li>
         <li>
           用剛剛的 tree 建第二個 visual tree，用{" "}
           <code>getBoundingClientRect</code> 去抓每個

@@ -26,7 +26,7 @@ function AppNavbar() {
             <Nav className="me-auto">
               <Nav.Link
                 id="github-link"
-                href="https://github.com/sc420/jellify-ur-website"
+                href="https://github.com/JMcrafter26/jellify-ur-website"
               >
                 {/* Reference: https://iconmonstr.com/github-1-svg/ */}
                 <svg width="24" height="24" viewBox="0 0 24 24">

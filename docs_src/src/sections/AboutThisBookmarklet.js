@@ -20,7 +20,7 @@ function AboutThisBookmarkletEN() {
       </p>
 
       <p>
-        Visit <a href="https://github.com/sc420/jellify-ur-website">GitHub</a>{" "}
+        Visit <a href="https://github.com/JMcrafter26/jellify-ur-website">GitHub</a>{" "}
         to see the code.
       </p>
     </>
@@ -48,7 +48,7 @@ function AboutThisBookmarkletTW() {
 
       <p>
         程式碼可以到{" "}
-        <a href="https://github.com/sc420/jellify-ur-website">GitHub</a> 上看
+        <a href="https://github.com/JMcrafter26/jellify-ur-website">GitHub</a> 上看
       </p>
     </>
   );

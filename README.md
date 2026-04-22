@@ -8,7 +8,7 @@ Inspired by [r/badUIbattles](https://www.reddit.com/r/badUIbattles/).
 
 ## Demo
 
-Check this [online demo](https://sc420.github.io/jellify-ur-website/) as well as see how it works.
+Check this [online demo](https://jmcrafter26.github.io/jellify-ur-website/) as well as see how it works.
 
 ## Development
 
@@ -31,7 +31,7 @@ tree nodes and see the Matter.js canvas.
 3. Add a new bookmark to your browser with the following code:
 
     ```javascript
-    javascript:["https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js","https://cdn.jsdelivr.net/npm/matter-js@0.17.1/build/matter.min.js","http://localhost:5500/src/jellify.js"].forEach(t=>{const e=document.getElementsByTagName("head")[0],a=document.createElement("script");a.src=t,e.appendChild(a)});
+    javascript:["https://cdn.jsdelivr.net/npm/matter-js@0.17.1/build/matter.min.js","http://localhost:5500/src/jellify.js"].forEach(t=>{const e=document.getElementsByTagName("head")[0],a=document.createElement("script");a.src=t,e.appendChild(a)});
     ```
 
    This minified code is generated from `bookmarklets/dev/default.js`.
